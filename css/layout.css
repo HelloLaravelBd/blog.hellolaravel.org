@@ -1,0 +1,10 @@
+#main-wrap {
+    transition: filter .4s linear;
+}
+
+.category-list-item span{
+margin-left: 20px;
+}
+.main-inner-content {
+  margin-top: -24px;
+}

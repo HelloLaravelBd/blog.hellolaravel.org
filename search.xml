@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+    
+    <entry>
+      <title><![CDATA[Laravel Horizon setup]]></title>
+      <url>/2017/07/28/horizon/</url>
+      <content type="html"><![CDATA[<p>Horizon provides a beautiful dashboard and code-driven configuration for your Laravel powered Redis queues. Horizon allows you to easily monitor key metrics of your queue system such as job throughput, runtime, and job failures.</p>
+<p>All of your worker configuration is stored in a single, simple configuration file, allowing your configuration to stay in source control where your entire team can collaborate. <code>Taylor Otwell</code> publish beta version . <code>laravel 5.5</code> and <code>php 7.1</code><br>Horizon setup :</p>
+<ul>
+<li>Redis Install<br>First install <code>redis</code> in your machine . if you don’t install redis in your machine Horizon does not work properly .<br><code>Download: redis</code>.<br>If your machine is windows download : Redis-x64–3.2.100.msi and install this .</li>
+<li>Horizon<br>Now time for horizon . setp by step follow instructions …………..</li>
+<li>step:1<br><code>composer require laravel/horizon</code></li>
+<li>step:2<br>Set this in your provider :<br><code>Laravel\Horizon\HorizonServiceProvider::class,</code></li>
+<li>step: 3<br><code>composer dump-autoload</code></li>
+<li>step:4<br><code>php artisan vendor:publish</code></li>
+<li>step:6<br><code>php artisan horizon</code></li>
+</ul>
+<p>Your setup is done now check</p>
+<p><code>https://localhost:8000/horizon</code></p>
+]]></content>
+      
+        <categories>
+            
+            <category> laravel </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> laravel </tag>
+            
+            <tag> horion </tag>
+            
+        </tags>
+        
+    </entry>
+    
+  
+  
+</search>
