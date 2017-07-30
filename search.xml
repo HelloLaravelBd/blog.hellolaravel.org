@@ -1,6 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search>
-
+<search> 
+  
+    
+    <entry>
+      <title><![CDATA[Ampps is a platform for laravel]]></title>
+      <url>/2017/07/30/ampps/</url>
+      <content type="html"><![CDATA[<ul>
+<li><code>Local server</code>: As a developer you are known with local server . It is main issue that which local server do you use .</li>
+</ul>
+<ul>
+<li><p>MAMP is the most popular application in OSX to run local server. for WAMP or XAMPP are the popular for windows .</p>
+</li>
+<li><p>Now time for Ampps . AMPPS is a free application, and available for Windows , Linus and OSX. It is packed with loads of feature, and it does more than just run a local server.</p>
+</li>
+<li><p>AMPPS is an easy to install software stack of Apache, Mysql, PHP, Perl, Python and Softaculous auto-installer that can be used on Desktops and office servers.</p>
+</li>
+</ul>
+<p>A complete package on your desktop, same like the server that provides many open source web applications. Application Management, Domain management, Database management, etc. are provided in a secure environment to ease your development.</p>
+<p>Softaculous is ready for your desktops with AMPPS to boost your development. Like servers, now auto-installation is possible on your desktop too.<br>It provides your favourite script installations by the click of a button.</p>
+<ul>
+<li>One click laravel install</li>
+</ul>
+<p><code>Ampps Default mysql</code></p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">DB_CONNECTION=mysql</div><div class="line">DB_HOST=<span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span></div><div class="line">DB_PORT=<span class="number">3306</span></div><div class="line">DB_DATABASE=your-database</div><div class="line">DB_USERNAME=root</div><div class="line">DB_PASSWORD=mysql</div></pre></td></tr></table></figure>
+<p><a href="http://www.ampps.com/downloads" target="_blank" rel="external">Download ampps</a></p>
+]]></content>
+      
+        <categories>
+            
+            <category> laravel </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> laravel </tag>
+            
+            <tag> ampps </tag>
+            
+            <tag> local-server </tag>
+            
+        </tags>
+        
+    </entry>
     
     <entry>
       <title><![CDATA[Laravel Horizon setup]]></title>
@@ -19,22 +62,22 @@
 <p>Your setup is done now check</p>
 <p><code>https://localhost:8000/horizon</code></p>
 ]]></content>
-
+      
         <categories>
-
+            
             <category> laravel </category>
-
+            
         </categories>
-
-
+        
+        
         <tags>
-
+            
             <tag> laravel </tag>
-
+            
         </tags>
-
+        
     </entry>
-
-
-
+    
+  
+  
 </search>
