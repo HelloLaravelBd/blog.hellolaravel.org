@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search> 
-  
+<search>
+
     
     <entry>
       <title><![CDATA[Laravel Horizon setup]]></title>
@@ -19,24 +19,22 @@
 <p>Your setup is done now check</p>
 <p><code>https://localhost:8000/horizon</code></p>
 ]]></content>
-      
+
         <categories>
-            
+
             <category> laravel </category>
-            
+
         </categories>
-        
-        
+
+
         <tags>
-            
+
             <tag> laravel </tag>
-            
-            <tag> horion </tag>
-            
+
         </tags>
-        
+
     </entry>
-    
-  
-  
+
+
+
 </search>
