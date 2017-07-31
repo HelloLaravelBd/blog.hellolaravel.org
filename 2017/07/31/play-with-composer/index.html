@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html class="full-height">
+<head>
+  <meta charset="utf-8">
+  
+ <title>play with composer | Blog || Hello Laravel</title>
+  <link rel="stylesheet" href="css/bulma.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdnpark.hellolaravel.org/lib/personal/bloghl/social-buttons.js">
+
+  </script>
+
+  <meta name="description" content="Composer is a tool for dependency management in PHP. It allows you to declare the libraries your project depends on and it will manage (install/update) them for you .  Composer is not a package manag">
+<meta name="keywords" content="laravel,php,composer">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Play with composer">
+<meta property="og:url" content="https://blog.hellolaravel.org/2017/07/31/play-with-composer/index.html">
+<meta property="og:site_name" content="Blog || Hello Laravel">
+<meta property="og:description" content="Composer is a tool for dependency management in PHP. It allows you to declare the libraries your project depends on and it will manage (install/update) them for you .  Composer is not a package manag">
+<meta property="og:updated_time" content="2017-07-31T12:12:36.936Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Play with composer">
+<meta name="twitter:description" content="Composer is a tool for dependency management in PHP. It allows you to declare the libraries your project depends on and it will manage (install/update) them for you .  Composer is not a package manag">
+  <meta property="og:image" content="https://blog.hellolaravel.org/images/posts/composer.png">
+  <meta name="twitter:image" content="https://blog.hellolaravel.org/images/posts/composer.png">
+   <link rel="icon" href="https://blog.hellolaravel.org/images/logo.png" type="image/x-icon">
+
+
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/common.css">
+<link rel="stylesheet" href="/css/layout.css">
+<link rel="stylesheet" href="/css/nav.css">
+<link rel="stylesheet" href="/css/article.css">
+<link rel="stylesheet" href="/css/bulma.css">
+<link rel="stylesheet" href="/css/social-buttons.css">
+
+</article>','css/nav', 'css/layout'])%>
+  
+
+</head>
+
+<body>
+  <header id="navbar" class="overflow-hidden">
+  <div class="container">
+    <nav class="nav">
+         <div class="nav-left">
+            <a href="/" class="nav-item" style="font-size: 20px;">
+              <span class="logo">Hello Laravel</span>'s Blog
+            </a>
+         </div>
+        <div class="nav-center is-hidden position-relative" id="search_container">
+            <div class="nav-item full-width full-height">
+                <i class="fa fa-search has-padding" aria-hidden="true"></i>
+                <input type="text" id="search_input" class="search-input full-height full-width" placeholder="Search post" autofocus>
+                <i id="close_search" class="fa fa-times" aria-hidden="true"></i>
+            </div>
+            <div id="search_result"></div>
+        </div>
+        <div class="nav-right nav-menu">
+            <a class="nav-item" id="search">
+                <i class="fa fa-search" aria-hidden="true"></i>
+            </a>
+            
+            <a class="nav-item" href="https://blog.hellolaravel.org">
+                Home
+            </a>
+            
+            <a class="nav-item" href="https://blog.hellolaravel.org/works">
+                Lates Work
+            </a>
+            
+            <a class="nav-item" href="https://blog.hellolaravel.org/about">
+                About
+            </a>
+            
+        </div>
+        <span class="nav-toggle" id="navMenuDropdown">
+            <span></span>
+            <span></span>
+            <span></span>
+        </span>
+        <div class="navbar-menu position-absolute full-width content-box is-hidden-desktop is-flex flex-column center" style="top: 100%;">
+            
+            <a class="nav-item flex-1" href="https://blog.hellolaravel.org">
+                Home
+            </a>
+            
+            <a class="nav-item flex-1" href="https://blog.hellolaravel.org/works">
+                Lates Work
+            </a>
+            
+            <a class="nav-item flex-1" href="https://blog.hellolaravel.org/about">
+                About
+            </a>
+            
+        </div>
+    </nav>
+  </div>
+</header>
+
+  <div id="main-wrap" class="position-relative" style="margin-top: 55px;">
+      <div class="main-inner-content ">
+          <!--博文页面-->
+
+<style>
+
+    header .bg-header {
+        height: 560px;
+        /*background-color: #62A4FF;*/
+        background-image: -webkit-linear-gradient(top, #2e712d, #f98478);
+    }
+
+    /*头像*/
+    .bg-header .avatar img {
+        border-radius: 50%;
+        /*margin-top: 100px;*/
+        max-width: 170px;
+    }
+
+    .bg-header h1,
+    .bg-header h2 {
+        color: white;
+    }
+
+    /*姓名*/
+    .bg-header h1 {
+        letter-spacing: 2px;
+        text-shadow: 0 0 10px rgba(15, 15, 15, .3);
+    }
+
+    /*描述*/
+    .bg-header h2 {
+        font-size: 18px;
+        /*margin-top: 12px;*/
+    }
+
+    /*整个作品展示区*/
+    .works-area {
+        margin-top: -300px;
+    }
+
+    .works-area .works-item {
+        width: 95%;
+        max-width: 1200px;
+        border-radius: 2px;
+        border: 1px solid #eee8d5;
+        margin: 25px auto;
+        box-shadow: 8px 5px 10px rgba(0, 0, 0, .2);
+    }
+
+    .works-item-img {
+        margin: auto -26px;
+    }
+
+    .works-item-img img {
+        width: 100%;
+    }
+
+    .works-area .works-item {
+        background: white;
+        padding: 0 25px 15px;
+    }
+
+    .works-item .works-content {
+        padding-top: 15px;
+    }
+
+    .works-item .title {
+        height: 50px;
+        margin: 0;
+    }
+
+    .works-item .title{
+        font-size: 18px;
+    }
+
+    .works-item .use span {
+        display: inline-block;
+        font-size: 12px;
+        border-radius: 3px;
+        padding: 0 4px;
+        border: thin solid #795548;
+    }
+
+    .works-item .subtitle {
+        margin: 0;
+        font-size: 17px;
+    }
+    .personal-profile{
+      margin-top: 50px;
+    }
+    .git-download{
+      height: 35px !important;
+      margin-left: 5px;
+    }
+    .ads-post-head{
+      width: 728px;
+      height: 90px;
+      background-color: red;
+      margin-top: 40px;
+    }
+</style>
+
+<div class="works-container" style="background-color: #fafafa">
+    <header>
+        <div class="bg-header is-flex justify-center">
+            <div class="profile">
+              <div class="ads-post-head">
+                <a href="https://itnishi.com" target="_blank"><img src="https://blog.hellolaravel.org/images/advertisehello.gif" alt="nishi it"></a>
+
+              </div>
+
+                <div class="personal-profile has-text-centered content">
+
+                    <h1> <i class="fa fa-asterisk" aria-hidden="true"></i> Play with composer</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container works-area">
+            <div class="works-item">
+                <div class="title is-flex center justify-space-between ">
+                    <span>
+                       <strong><i class="fa fa-pencil-square" aria-hidden="true"></i> <a href="https://twitter.com/code4mk">@code4mk</a></strong>
+                    </span>
+
+                    <span>
+                         <strong><i class="fa fa-clock-o" aria-hidden="true"></i> 2017-07-31</strong>
+                        </span>
+
+                </div>
+                <div class="works-item-img">
+                    <img src="https://blog.hellolaravel.org/images/posts/composer.png" alt="Image">
+                </div>
+                <div class="works-content">
+                    <div class="use text-warning"></div>
+                    　
+
+
+                    <div class="content">
+                      <ul>
+<li><code>Composer</code> is a tool for dependency management in PHP. It allows you to declare the libraries your project depends on and it will manage (install/update) them for you .</li>
+</ul>
+<p>Composer is not a package manager in the same sense as Yum or Apt are. Yes, it deals with “packages” or libraries, but it manages them on a per-project basis, installing them in a directory (e.g. vendor) inside your project. By default it does not install anything globally. Thus, it is a dependency manager. It does however support a “global” project for convenience via the global command.</p>
+<p>Composer inspired by <code>npm</code> and <code>bundler</code></p>
+<p>When you command your cli , composer check <code>compoer.json</code> and <code>composer.lock</code> then star installing package .</p>
+<ul>
+<li>composer.json file as like this.<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    <span class="string">"name"</span>: <span class="string">"laravel/laravel"</span>,</div><div class="line">    <span class="string">"description"</span>: <span class="string">"The Laravel Framework."</span>,</div><div class="line">    <span class="string">"keywords"</span>: [<span class="string">"framework"</span>, <span class="string">"laravel"</span>],</div><div class="line">    <span class="string">"license"</span>: <span class="string">"MIT"</span>,</div><div class="line">    <span class="string">"type"</span>: <span class="string">"project"</span>,</div><div class="line">    <span class="string">"require"</span>: &#123;</div><div class="line">        <span class="string">"php"</span>: <span class="string">"&gt;=5.6.4"</span>,</div><div class="line">        <span class="string">"laravel/framework"</span>: <span class="string">"5.4.*"</span>,</div><div class="line">        <span class="string">"laravel/tinker"</span>: <span class="string">"~1.0"</span></div><div class="line">    &#125;,</div><div class="line">    <span class="string">"require-dev"</span>: &#123;</div><div class="line">        <span class="string">"fzaninotto/faker"</span>: <span class="string">"~1.4"</span>,</div><div class="line">        <span class="string">"mockery/mockery"</span>: <span class="string">"0.9.*"</span>,</div><div class="line">        <span class="string">"phpunit/phpunit"</span>: <span class="string">"~5.7"</span></div><div class="line">    &#125;,</div><div class="line">    <span class="string">"autoload"</span>: &#123;</div><div class="line">        <span class="string">"classmap"</span>: [</div><div class="line">            <span class="string">"database/seeds"</span>,</div><div class="line">            <span class="string">"database/factories"</span></div><div class="line">        ],</div><div class="line">        <span class="string">"psr-4"</span>: &#123;</div><div class="line">            <span class="string">"App\\"</span>: <span class="string">"app/"</span></div><div class="line">        &#125;</div><div class="line">    &#125;,</div><div class="line">    <span class="string">"autoload-dev"</span>: &#123;</div><div class="line">        <span class="string">"psr-4"</span>: &#123;</div><div class="line">            <span class="string">"Tests\\"</span>: <span class="string">"tests/"</span></div><div class="line">        &#125;</div><div class="line">    &#125;,</div><div class="line">    <span class="string">"scripts"</span>: &#123;</div><div class="line">        <span class="string">"post-root-package-install"</span>: [</div><div class="line">            <span class="string">"php -r \"file_exists('.env') || copy('.env.example', '.env');\""</span></div><div class="line">        ],</div><div class="line">        <span class="string">"post-create-project-cmd"</span>: [</div><div class="line">            <span class="string">"php artisan key:generate"</span></div><div class="line">        ],</div><div class="line">        <span class="string">"post-install-cmd"</span>: [</div><div class="line">            <span class="string">"Illuminate\\Foundation\\ComposerScripts::postInstall"</span>,</div><div class="line">            <span class="string">"php artisan optimize"</span></div><div class="line">        ],</div><div class="line">        <span class="string">"post-update-cmd"</span>: [</div><div class="line">            <span class="string">"Illuminate\\Foundation\\ComposerScripts::postUpdate"</span>,</div><div class="line">            <span class="string">"php artisan optimize"</span></div><div class="line">        ]</div><div class="line">    &#125;,</div><div class="line">    <span class="string">"config"</span>: &#123;</div><div class="line">        <span class="string">"preferred-install"</span>: <span class="string">"dist"</span>,</div><div class="line">        <span class="string">"sort-packages"</span>: <span class="keyword">true</span>,</div><div class="line">        <span class="string">"optimize-autoloader"</span>: <span class="keyword">true</span></div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>composer is also a version management system .</p>
+<blockquote>
+<p><a href="https://getcomposer.org/download/" target="_blank" rel="external">Download composer</a></p>
+</blockquote>
+
+                    </div>
+                    <hr>
+                    <div class="title is-flex center justify-space-between">
+                      
+                          <div>
+                            Tags:
+                              
+                                  <a class="tag is-post-tag" href="/tags/laravel/">laravel</a>
+                              
+                                  <a class="tag is-post-tag" href="/tags/php/">php</a>
+                              
+                                  <a class="tag is-post-tag" href="/tags/composer/">composer</a>
+                              
+                          </div>
+                      
+
+                      <div class="social-sharing is-clean">
+                        <a target="_blank" href="https://twitter.com/share?url=https://blog.hellolaravel.org/2017/07/31/play-with-composer/" class="share-twitter">
+  <i class="fa fa-2x fa-twitter-square" aria-hidden="true"></i>
+  <span class="share-title">Tweet</span>
+</a>
+<a target="_blank" href="https://www.facebook.com/sharer.php?u=https://blog.hellolaravel.org/2017/07/31/play-with-composer/" class="share-facebook">
+      <!-- <span class="icon icon-facebook" aria-hidden="true"></span> -->
+      <i class="fa fa-2x  fa-facebook-official" aria-hidden="true"></i>
+      <span class="share-title"> Share</span>
+    </a>
+                      </div>
+
+                </div>
+
+
+            </div>
+
+    </div>
+</div>
+
+      </div>
+  </div>
+  <style>
+  #footer {
+    min-height: 10vh;
+    background: #f4645f;
+    color: #e1e1e1;
+  }
+
+  #footer a {
+    color: #fff;
+    font-weight: bolder;
+
+  }
+</style>
+<footer id="footer" class="has-text-centered is-flex center">
+  <div class="container has-padding">
+    <div>
+      <div class="copyright">
+        <h1>Powered By <a  href="https://twitter.com/code4mk" target="_blank">@code4mk</a></h1>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="/js/search_core.js"></script>
+<script src="/js/script.js"></script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
+</html>

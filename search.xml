@@ -3,6 +3,44 @@
   
     
     <entry>
+      <title><![CDATA[Play with composer]]></title>
+      <url>/2017/07/31/play-with-composer/</url>
+      <content type="html"><![CDATA[<ul>
+<li><code>Composer</code> is a tool for dependency management in PHP. It allows you to declare the libraries your project depends on and it will manage (install/update) them for you .</li>
+</ul>
+<p>Composer is not a package manager in the same sense as Yum or Apt are. Yes, it deals with “packages” or libraries, but it manages them on a per-project basis, installing them in a directory (e.g. vendor) inside your project. By default it does not install anything globally. Thus, it is a dependency manager. It does however support a “global” project for convenience via the global command.</p>
+<p>Composer inspired by <code>npm</code> and <code>bundler</code></p>
+<p>When you command your cli , composer check <code>compoer.json</code> and <code>composer.lock</code> then star installing package .</p>
+<ul>
+<li>composer.json file as like this.<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    <span class="string">"name"</span>: <span class="string">"laravel/laravel"</span>,</div><div class="line">    <span class="string">"description"</span>: <span class="string">"The Laravel Framework."</span>,</div><div class="line">    <span class="string">"keywords"</span>: [<span class="string">"framework"</span>, <span class="string">"laravel"</span>],</div><div class="line">    <span class="string">"license"</span>: <span class="string">"MIT"</span>,</div><div class="line">    <span class="string">"type"</span>: <span class="string">"project"</span>,</div><div class="line">    <span class="string">"require"</span>: &#123;</div><div class="line">        <span class="string">"php"</span>: <span class="string">"&gt;=5.6.4"</span>,</div><div class="line">        <span class="string">"laravel/framework"</span>: <span class="string">"5.4.*"</span>,</div><div class="line">        <span class="string">"laravel/tinker"</span>: <span class="string">"~1.0"</span></div><div class="line">    &#125;,</div><div class="line">    <span class="string">"require-dev"</span>: &#123;</div><div class="line">        <span class="string">"fzaninotto/faker"</span>: <span class="string">"~1.4"</span>,</div><div class="line">        <span class="string">"mockery/mockery"</span>: <span class="string">"0.9.*"</span>,</div><div class="line">        <span class="string">"phpunit/phpunit"</span>: <span class="string">"~5.7"</span></div><div class="line">    &#125;,</div><div class="line">    <span class="string">"autoload"</span>: &#123;</div><div class="line">        <span class="string">"classmap"</span>: [</div><div class="line">            <span class="string">"database/seeds"</span>,</div><div class="line">            <span class="string">"database/factories"</span></div><div class="line">        ],</div><div class="line">        <span class="string">"psr-4"</span>: &#123;</div><div class="line">            <span class="string">"App\\"</span>: <span class="string">"app/"</span></div><div class="line">        &#125;</div><div class="line">    &#125;,</div><div class="line">    <span class="string">"autoload-dev"</span>: &#123;</div><div class="line">        <span class="string">"psr-4"</span>: &#123;</div><div class="line">            <span class="string">"Tests\\"</span>: <span class="string">"tests/"</span></div><div class="line">        &#125;</div><div class="line">    &#125;,</div><div class="line">    <span class="string">"scripts"</span>: &#123;</div><div class="line">        <span class="string">"post-root-package-install"</span>: [</div><div class="line">            <span class="string">"php -r \"file_exists('.env') || copy('.env.example', '.env');\""</span></div><div class="line">        ],</div><div class="line">        <span class="string">"post-create-project-cmd"</span>: [</div><div class="line">            <span class="string">"php artisan key:generate"</span></div><div class="line">        ],</div><div class="line">        <span class="string">"post-install-cmd"</span>: [</div><div class="line">            <span class="string">"Illuminate\\Foundation\\ComposerScripts::postInstall"</span>,</div><div class="line">            <span class="string">"php artisan optimize"</span></div><div class="line">        ],</div><div class="line">        <span class="string">"post-update-cmd"</span>: [</div><div class="line">            <span class="string">"Illuminate\\Foundation\\ComposerScripts::postUpdate"</span>,</div><div class="line">            <span class="string">"php artisan optimize"</span></div><div class="line">        ]</div><div class="line">    &#125;,</div><div class="line">    <span class="string">"config"</span>: &#123;</div><div class="line">        <span class="string">"preferred-install"</span>: <span class="string">"dist"</span>,</div><div class="line">        <span class="string">"sort-packages"</span>: <span class="keyword">true</span>,</div><div class="line">        <span class="string">"optimize-autoloader"</span>: <span class="keyword">true</span></div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>composer is also a version management system .</p>
+<blockquote>
+<p><a href="https://getcomposer.org/download/" target="_blank" rel="external">Download composer</a></p>
+</blockquote>
+]]></content>
+      
+        <categories>
+            
+            <category> laravel </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> laravel </tag>
+            
+            <tag> php </tag>
+            
+            <tag> composer </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Ampps is a platform for laravel]]></title>
       <url>/2017/07/30/ampps/</url>
       <content type="html"><![CDATA[<ul>
